@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% load static %}
+
+
+{% block content %}
+<div class="operator_menu">
+    <h2>Эксперт номер {{window_number}}</h2>
+    <div class="operator_info">
+        <h1>Талон: {{ticket_id}}</h1>
+        <h2>{{ticket_question}}</h2>
+    </div>
+
+    <div class="operator_buttons">
+        <button class="operator_button" onclick="location.href='ready/{{window_number}}'">Следующий с талончиком</button>
+        <button class="operator_button" onclick="location.href='without_ticket/{{window_number}}'">Без талончика</button>
+    </div>
+    
+</div>
+{% endblock content %}

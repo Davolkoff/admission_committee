@@ -1,0 +1,163 @@
+@font-face {
+  font-family: "ALS Sirius Regular";
+  src: local("ALS Sirius"), url("ALS_Sirius_Regular_0.95.otf");
+}
+
+html {
+  background: rgb(59, 118, 152);
+  background: linear-gradient(
+    137deg,
+    rgba(59, 118, 152, 1) 0%,
+    rgba(217, 232, 235, 1) 26%,
+    rgba(255, 255, 255, 1) 100%
+  );
+}
+body {
+  background-repeat: norepeat;
+  display: flex;
+  flex-direction: column;
+  margin: 0px;
+  width: 100vw;
+  height: 100vh;
+}
+
+.buttons {
+  display: flex;
+  flex: 0 0 auto;
+  margin-top: 10vh;
+  height: 50vh;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 15vh;
+}
+
+.operator_buttons {
+  display: flex;
+  flex-direction: row;
+  width: 70vw;
+  justify-content: space-between;
+}
+
+.button {
+  font-family: "Roboto", sans-serif;
+  border: none;
+  width: 50vw;
+  background: #3b7698;
+  box-shadow: 0px 4px 4px rgba(209, 209, 209, 0.25);
+  border-radius: 20px;
+
+  font-size: 180%;
+  color: #fff;
+
+  transition: ease-in-out 0.3s;
+}
+
+.operator_button:hover {
+  background-color: rgb(70, 107, 189);
+  border-radius: 30px;
+  font-size: 200%;
+  width: 55vw;
+  height: 160px;
+}
+
+.footer {
+  display: flex;
+  height: 25vh;
+  flex: 0 1 auto;
+  justify-content: center;
+}
+
+.logo {
+  margin-bottom: 5vh;
+}
+
+.operator_info {
+  display: flex;
+  flex: 0 0 auto;
+
+  height: 30vh;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-bottom: 5vh;
+}
+
+.operator_menu {
+  display: flex;
+  font-family: "Roboto", sans-serif;
+  flex: 0 0 auto;
+  margin-top: 10vh;
+  height: 55vh;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-bottom: 10vh;
+}
+
+.operator_button {
+  border: none;
+  width: 30vw;
+  height: 7vh;
+  background: #3b7698;
+  box-shadow: 0px 4px 4px rgba(209, 209, 209, 0.25);
+  border-radius: 20px;
+
+  font-size: 180%;
+
+  color: #fff;
+
+  transition: ease-in-out 0.3s;
+}
+
+h1 {
+  font-size: 400%;
+}
+
+h2 {
+  font-size: 200%;
+}
+
+.queue_label {
+    font-size: 800%;
+}
+
+.queue_number {
+    font-size: 700%;
+}
+
+.operators-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 100vw;
+  flex-wrap: wrap;
+  height: 75vh;
+  margin-top: 5vh;
+}
+
+.window-info {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  font-family: "Roboto", sans-serif;
+  /* border: 1px solid black; */
+  width: 40vw;
+  border: 5px solid #3b7698;
+  border-radius: 45px;
+  margin: 50px;
+}
+
+.window-number {
+  font-size: 500%;
+}
+
+.window-ticket {
+  font-size: 500%;
+}
+
+.window-divider {
+  font-size: 300%;
+}

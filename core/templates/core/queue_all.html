@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+{% load static %}
+
+
+
+
+{% block content %}
+<div class="operators-info">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            setTimeout(function() {
+                location.reload(true);
+            }, 5000)
+        })
+    </script>
+    
+        {% for operator in operators %}
+        <div class="window-info">
+            <div class="window-number">Окно {{operator.window_number}} </div>
+            <div class="window-divider">|</div>
+            {% if operator.current_ticket.ticket_id == -1 %}
+            <div class="window-ticket">-</div>
+            {% else %}
+            <div class="window-ticket"><b>{{ operator.current_ticket.ticket_id }}</b></div>
+            {% endif %}
+        </div>
+        {% endfor %}
+
+        {% for expert in experts %}
+        <div class="window-info">
+            <div class="window-number">Эксперт {{expert.window_number}} </div>
+            <div class="window-divider">|</div>
+            {% if expert.current_ticket.ticket_id == -1 %}
+            <div class="window-ticket">-</div>
+            {% else %}
+            <div class="window-ticket"><b>{{ expert.current_ticket.ticket_id }}</b></div>
+            {% endif %}
+        </div>
+        {% endfor %}
+    
+</div>
+{% endblock content %}

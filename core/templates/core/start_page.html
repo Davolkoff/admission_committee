@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+<div class="operator_menu">
+    <h1>IP: {{ ip_addr }}</h1>
+    <button class="operator_button" onclick="location.href='{% url 'main' %}'">Начать</button>
+</div>
+{% endblock content %}

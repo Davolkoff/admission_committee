@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block script %}
+<script>
+    // Ожидание 3 секунд
+    setTimeout(function() {
+        // Перенаправление на вторую страницу
+        window.location.href = '/';
+    }, 3000);
+</script>
+{% endblock %}
+
+{% block content %}
+<div class="operator_menu">
+    <h1>Пожалуйста, подождите</h1>
+</div>
+{% endblock content %}

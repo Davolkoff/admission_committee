@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% load static %}
+
+
+
+
+{% block content %}
+<div class="operator_menu">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            setTimeout(function() {
+                location.reload(true);
+            }, 10000)
+        })
+    </script>
+    <!-- <h1>Окно номер {{window_number}}</h1> -->
+    <div class="queue_label">Окно номер {{window_number}}</div>
+    <div class="operator_info">
+        <div class="queue_number">Талон: {{ticket_id}}</div>
+    </div>
+</div>
+{% endblock content %}

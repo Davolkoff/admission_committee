@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% load static %}
+
+
+{% block content %}
+<div class="buttons">
+        {% for button in buttons %}
+
+            {% if button.redirect_page %}
+                <button class="button" style="height: calc(40vh/{{ num_of_buttons }})" onclick="location.href='/{{button.redirect_page.page_id}}'">{{ button.text }}</button>
+            {% elif button.print_file != "-" %}
+                <button class="button" style="height: calc(40vh/{{ num_of_buttons }})" onclick="location.href='/print/{{ page.page_id }}/{{ button.button_id }}'">{{ button.text }}</button>
+            {% else %}
+                <button class="button" style="height: calc(40vh/{{ num_of_buttons }})">{{ button.text }}</button>
+            {% endif %}
+
+        {% endfor %}
+</div>
+{% endblock content %}
+

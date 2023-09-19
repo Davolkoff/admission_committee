@@ -1,0 +1,31 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ page.name }}</title>
+    <style>
+        @font-face {
+            font-family: Roboto;
+            src: url({% static 'fonts/Roboto-Regular.ttf' %}); /* Путь к файлу со шрифтом */
+        }
+
+    </style>
+    {% block script %}
+    {% endblock %}
+    <link rel="stylesheet" href={% static 'index.css' %}>
+</head>
+
+<body>
+    {% block content %}
+    {% endblock %}
+
+    <div class="footer">
+        <img src={% static 'img/logo1.svg' %} alt="logo" class="logo">
+    </div>
+    
+</body>
+
+</html>
